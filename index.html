@@ -33,32 +33,33 @@
             </div>
         </nav>
     </header>
-    <main class="w-4/5 mx-auto">
-        <div class="flex justify-center gap-6 mb-12">
-            <button class="bg-[#B4F461] items-center rounded-lg p-4 text-black font-black">Donation</button>
-            <button class="rounded-lg items-center p-4 text-black bg-slate-300">History</button>
+    <main class="w-4/5 mx-auto max-sm:justify-center">
+        <div class="flex justify-center gap-6 mb-12 max-sm:mx-auto">
+            <button id="donate-button" class="bg-[#B4F461] items-center rounded-lg p-4 text-black font-black">Donation</button>
+            <button id="history-button" class="rounded-lg items-center p-4 text-black bg-[#B4F461]  bg-slate-300">History</button>
         </div>
-        <section class="flex justify-between gap-6 mb-8">
-            <div class="w-1/2">
+    <section id="donate-section" class="max-sm:mx-auto max-sm:justify-center">
+        <section class="flex justify-between gap-6 mb-8 max-sm:flex-col max-sm:mx-auto max-sm:justify-center">
+            <div class="w-1/2 max-sm:w-full">
                 <img src="./assets/noakhali.png" alt="">
             </div>
-            <div class="w-1/2 space-y-6">
+            <div class="w-1/2 space-y-6 max-sm:w-full">
                 <div class="flex">
                     <img src="./assets/coin.png" alt="">
                     <p id="donation">5000 BDT</p>
                 </div>
                 <h1 class="text-black font-semibold text-xl">Donate for Flood at Noakhali, Bangladesh</h1>
-                <p> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
+                <p class="mx-auto"> The recent floods in Noakhali have caused significant damage to homes  infrastructure. Your donation will help provide essential supplies and  to those affected by this disaster. Every contribution, big or small, makes  difference. Please join us in supporting the relief efforts and making a positive impact on the lives of those in need.</p>
                 <input id="donate-amount" type="text" placeholder="Write Donation Amount" class="rounded-lg p-4"><br>
                 <button id="donate" class="bg-[#B4F461] items-center rounded-lg p-4 px-48 text-black font-black">Donate Now</button>
             </div>
         </section>
         
-        <section class="flex justify-between gap-6 mb-8">
-            <div class="w-1/2">
+        <section class="flex justify-between gap-6 mb-8 max-sm:flex-col">
+            <div class="w-1/2 max-sm:w-full">
                 <img src="./assets/feni.png" alt="">
             </div>
-            <div class="w-1/2 space-y-6">
+            <div class="w-1/2 space-y-6 max-sm:w-full">
                 <div class="flex">
                     <img src="./assets/coin.png" alt="">
                     <p id="donation-amount-feni">10000 BDT</p>
@@ -70,11 +71,11 @@
             </div>
         </section>
 
-        <section class="flex justify-between gap-6 mb-8">
-            <div class="w-1/2">
+        <section class="flex justify-between gap-6 mb-8 max-sm:flex-col">
+            <div class="w-1/2 max-sm:w-full">
                 <img src="./assets/quota-protest.png" alt="">
             </div>
-            <div class="w-1/2 space-y-6">
+            <div class="w-1/2 space-y-6 max-sm:w-full">
                 <div class="flex">
                     <img src="./assets/coin.png" alt="">
                     <p id="donation-amount-quota">5000 BDT</p>
@@ -85,9 +86,17 @@
                 <button id="donate-quota" class="bg-[#B4F461] items-center rounded-lg p-4 px-48 text-black font-black">Donate Now</button>
             </div>
         </section>
+    </section>
+    <section id="history" class="hidden">
+        <h1 class="flex justify-center">History</h1>
+        <div id="history-container" class="justify-center flex-col mx-auto space-y-12 shadow-lg rounded-lg p-4 font-extrabold">
+
+        </div>
+    </section>
     </main>
     <script src="./js/utilities.js"></script>
     <script src="./js/donate.js"></script>
+    <script src="./js/toggle.js"></script>
 </body>
 
 </html>
